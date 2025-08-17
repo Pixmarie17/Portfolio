@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+  <header>
+    <div class="logo">Portfolio</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Hi, I'm Web Developer</h1>
+    <p>I build modern, elegant and functional digital experiences based on frontend and interactive design.</p>
+    <button class="btn" onclick="scrollToSection()">View Portfolio</button>
+  </section>
+  
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+
+    <div class="portfolio-tabs">
+        <button class="tab active" data-category="all">All</button>
+        <button class="tab" data-category="apps">Apps</button>
+        <button class="tab" data-category="games">Games</button>
+        <button class="tab" data-category="web">Websites</button>
+    </div>
+
+    <div class="projects-container">
+        <div class="project-card" data-category="apps">
+            <img src="img/App1.png" alt="Uber App">
+            <h4>Uber</h4>
+            <p>React + Firebase uber app.</p>
+            <a class="btn" href="#">View Code</a>
+        </div>
+
+        <div class="project-card" data-category="games">
+            <img src="img/Game.png" alt="Dual Hearts">
+            <h4>Dual Hearts</h4>
+            <p>Classic style JavaScript Game.</p>
+            <a class="btn" href="#">View Code</a>
+        </div>
+
+         <div class="project-card" data-category="web">
+            <img src="img/Website.jpg" alt="Portfolio Website">
+            <h4>Portfolio Website</h4>
+            <p>Professional site with animations and dark theme.</p>
+            <a class="btn" href="#">View Code</a>
+        </div>
+
+         <div class="project-card" data-category="apps">
+            <img src="img/App2.jpg" alt="Budget Tracker App">
+            <h4>Budget Tracker</h4>
+            <p>App to track expenses with charts and data.</p>
+            <a class="btn" href="#">View Code</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- About Us-->
+  <section id="about-us" class="about">
+    <h2>About Us</h2>
+
+    <div class="about-content">
+      <div class="about-image">
+        <img src="img/about.jpg" alt="Profile Photo">
+      </div>
+
+      <div class="about-text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, exercitationem asperiores eos pariatur dolorem facilis placeat ab saepe voluptate vel 
+          sunt dignissimos illum velit temporibus repellat harum nobis, modi recusandae?</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, exercitationem asperiores eos pariatur dolorem facilis placeat ab saepe voluptate vel 
+          sunt dignissimos illum velit temporibus repellat harum nobis, modi recusandae?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-content">
+      <form action="#" class="contact-form" method="POST">
+        <label for="name" class="sr-only">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+        <label for="email" class="sr-only">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+        <label for="message" class="sr-only">Your Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-boxes">
+          <div class="box">
+            <div class="icon"><i class='bx bxs-map'></i></div>
+            <div class="text">
+              <h3>Location</h3>
+              <p>Name</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i class='bx bxs-phone'></i></div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>(555)555-5555</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="icon"><i class='bx bxs-envelope'></i></div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>example@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="socials">
+          <h3>Follow Me</h3>
+          <div class="social-links icons-only">
+            <a href="#" target="_blank" aria-label="GitHub"><i class='bxl bx-github'></i></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class='bxl bx-linkedin'></i></a>
+            <a href="#" target="_blank" aria-label="X"><i class='bxl bx-twitter-x'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
